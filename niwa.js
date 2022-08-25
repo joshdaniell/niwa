@@ -39,19 +39,19 @@ async function dataNIWA() {
 }
 
 // Get and display chart data from NIWA
-async function chartNIWA() {
-  let response = await fetch(chartUrl);
-  document.getElementById("chartNIWA").src = response.url;
-}
+// async function chartNIWA() {
+//   let response = await fetch(chartUrl);
+//   document.getElementById("chartNIWA").src = response.url;
+// }
 
 // Clear and get fresh data from NIWA
-function refresh() {
-  document.getElementById("today").innerHTML = "";
-  document.getElementById("tomorrow").innerHTML = "";
-  document.getElementById("nextDay").innerHTML = "";
-  dataNIWA();
-  // chartNIWA();
-}
+// function refresh() {
+//   document.getElementById("today").innerHTML = "";
+//   document.getElementById("tomorrow").innerHTML = "";
+//   document.getElementById("nextDay").innerHTML = "";
+//   dataNIWA();
+//   // chartNIWA();
+// }
 
-// Retrieve and periodically refresh data
-setInterval(refresh(), 3600000);
+// // Retrieve and periodically refresh data
+// setInterval(refresh(), 3600000);
