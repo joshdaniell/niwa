@@ -4,11 +4,10 @@ const Url = 'https://api.niwa.co.nz/tides/data?apikey=OqrDnYJWXCCvAfwHT7xunCPLP7
 // Get data from NIWA
 async function fetchAsync (url) {
   let response = await fetch(url);
-  // I think this extracts the JSON data from the NIWA response
+  // Extract JSON data from the NIWA response
   let data = await response.json();
-  // I seem to be getting the right data from NIWA when logging it
   console.log(data);
-  // But I'm getting stuck when trying to add time times to HTML - I'm not sure how to pick out the values I want
+  // Add time times to HTML
   document.getElementById("NIWA").innerHTML = JSON.stringify(data);
 }
 
