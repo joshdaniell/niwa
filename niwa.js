@@ -8,6 +8,7 @@ const chartUrl = "https://api.niwa.co.nz/tides/chart.png?apikey=OqrDnYJWXCCvAfwH
 async function dataNIWA() {
   let response = await fetch(dataUrl);
   let data = await response.json();
+  console.log(data);
   for (i = 0; i < data.values.length; i++) {
     const item = data.values[i];
     // Set tide description
